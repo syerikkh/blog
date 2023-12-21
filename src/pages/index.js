@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { HeaderPart } from '../components/HeaderPart'
-import { AllBlogPosts } from '@/components/AllBlogPosts'
+import { AllBlogPosts } from '@/components/Blog Page/AllBlogPosts'
+import { Footer } from '@/components/Footer'
+import { PictureSlidePart } from '@/components/Home Page/PictureSlidePart'
 
 
 
@@ -11,10 +13,10 @@ export default function Home() {
   return (
     <div className="lg:w-[1216px] m-auto">
       <HeaderPart />
-      <div className='lg:py-12 flex items-center'>
-        <div className='flex justify-start items-start text-2xl font-bold'>All Blog Posts</div>
-      </div>
-      <AllBlogPosts />
+
+      <PictureSlidePart />
+      {/* <AllBlogPosts /> */}
+
     </div>
   )
 }
