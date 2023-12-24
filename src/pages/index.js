@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <div className="lg:w-[1216px] m-auto">
       <HeaderPart />
-
       <PictureSlidePart />
       {/* <AllBlogPosts /> */}
 
