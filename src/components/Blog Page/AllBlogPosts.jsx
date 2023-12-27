@@ -19,7 +19,7 @@ export const AllBlogPosts = () => {
                             <div><img className='rounded-xl' src={article.social_image} alt="" /></div>
                             <div className='lg:p-2 lg:flex lg:flex-col lg:gap-4'>
                                 <div className='gap-4 flex flex-col'>
-                                    <div className='py-1 px-[10px] text-[#4B6BFB] text-base bg-gray-100 rounded-lg'>{article.tags}</div>
+                                    <div className='py-1 px-[10px] text-[#4B6BFB] text-base bg-gray-100 rounded-lg'>{article.tag_list}</div>
                                     <h1 className='font-semibold text-xl'>{article.title}</h1>
                                 </div>
                                 <div className='flex lg:gap-3 items-center mt-5'>

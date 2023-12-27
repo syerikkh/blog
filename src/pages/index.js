@@ -5,6 +5,7 @@ import { AllBlogPosts } from '@/components/Blog Page/AllBlogPosts'
 import { Footer } from '@/components/Footer'
 import { PictureSlidePart } from '@/components/Home Page/PictureSlidePart'
 import { Trending } from '@/components/Home Page/Trending'
+import { AllBlogPostHome } from '@/components/Home Page/AllBlogPostHome'
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
       <PictureSlidePart />
       {/* <AllBlogPosts /> */}
       <Trending />
+      <AllBlogPostHome />
     </div>
   )
 }
