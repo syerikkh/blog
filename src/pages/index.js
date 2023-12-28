@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer'
 import { PictureSlidePart } from '@/components/Home Page/PictureSlidePart'
 import { Trending } from '@/components/Home Page/Trending'
 import { AllBlogPostHome } from '@/components/Home Page/AllBlogPostHome'
+import { ContactPage } from '@/components/Contact Page/ContactPage'
 
 
 
@@ -15,12 +16,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className="lg:w-[1216px] m-auto">
+    <div className="w-[1216px] m-auto">
       <HeaderPart />
       <PictureSlidePart />
       {/* <AllBlogPosts /> */}
       <Trending />
       <AllBlogPostHome />
+      {/* <ContactPage /> */}
+      <Footer />
     </div>
   )
 }

@@ -1,12 +1,11 @@
-import { AllBlogPosts } from '@/components/Blog Page/AllBlogPosts'
+import { ContactPage } from '@/components/Contact Page/ContactPage'
 import { HeaderPart } from '@/components/HeaderPart'
 import React from 'react'
 
-export default function Blog() {
+export default function Contact() {
     return (
         <div className="lg:w-[1216px] m-auto">
-            <HeaderPart />
-            <AllBlogPosts />
+            <ContactPage />
         </div>
     )
 }

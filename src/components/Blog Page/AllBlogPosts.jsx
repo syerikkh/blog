@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Footer } from '../Footer'
 
 export const AllBlogPosts = () => {
     const [articles, setArticles] = useState([])
@@ -19,7 +20,9 @@ export const AllBlogPosts = () => {
                             <div><img className='rounded-xl' src={article.social_image} alt="" /></div>
                             <div className='lg:p-2 lg:flex lg:flex-col lg:gap-4'>
                                 <div className='gap-4 flex flex-col'>
-                                    <div className='py-1 px-[10px] text-[#4B6BFB] text-base bg-gray-100 rounded-lg'>{article.tag_list}</div>
+                                    <div className='flex gap-2 overflow-auto'>{article.tag_list.map((tags) => {
+                                        return <div className='py-1 px-[10px] text-[#4B6BFB] text-base bg-gray-100 rounded-lg'>{tags}</div>
+                                    })}</div>
                                     <h1 className='font-semibold text-xl'>{article.title}</h1>
                                 </div>
                                 <div className='flex lg:gap-3 items-center mt-5'>
@@ -37,6 +40,7 @@ export const AllBlogPosts = () => {
             <div className='flex m-auto rounded-lg py-3 px-5 border-solid border-2 border-[#E8E8EA] w-[123px]'>
                 <button>Load More</button>
             </div>
+            <div><Footer /></div>
         </div>
     )
 }
