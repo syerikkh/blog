@@ -26,11 +26,11 @@ export const AllBlogPostHome = () => {
           </div>
           <div className='font-bold text-[#495057] cursor-pointer'>View All</div>
         </div>
-        <div className='lg:grid lg:grid-cols-3 lg:gap-4 lg:grid-rows-6'>
+        <div className='lg:grid lg:grid-cols-3 lg:gap-4'>
           {articles.map((article, index) => {
             return (
               <Link href={`/${article.id}`} key={index}>
-                <div className='lg:p-4 flex flex-col lg:gap-4 border-solid border-2 border-[#E8E8EA] rounded-xl cursor-pointer'>
+                <div className='w-[392px] h-[476px] lg:p-4 flex flex-col lg:gap-4 border-solid border-2 border-[#E8E8EA] rounded-xl cursor-pointer'>
                   <div><img className='rounded-xl' src={article.social_image} alt="" /></div>
                   <div className='lg:p-2 lg:flex lg:flex-col lg:gap-4'>
                     <div className='gap-4 flex flex-col overflow-auto'>
