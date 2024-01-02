@@ -11,6 +11,7 @@ import { ContactPage } from '@/components/Contact Page/ContactPage'
 
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 

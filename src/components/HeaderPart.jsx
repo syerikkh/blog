@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MetaBlogLogo } from './MetaBlogLogo'
 import { SearchIcon } from './SearchIcon'
 import Link from 'next/link'
 // import Blog from '@/pages/blog'
 
 export const HeaderPart = () => {
+    const [data, setData] = useState([]);
+    const fetchData = async () => {
+        const res = await fetch('https://dev.to/api/articles');
+        const data = await res.json();
+        setData(data);
+    }
     return (
-        <div className="lg:py-8 lg:w-full m-auto">
-            <div className="flex m-auto">
+        <div className="lg:py-8 lg:w-full">
+            <div className="flex">
                 <div className='lg:mr-[118px]'><MetaBlogLogo /></div>
                 <div className='flex lg:gap-10 justify-center items-center lg:w-[667px] lg:text-base'>
                     <Link href="/">Home</Link>
@@ -15,10 +21,13 @@ export const HeaderPart = () => {
                     <Link href="/contact">Contact</Link>
                 </div>
                 <div className='flex gap-3 justify-center items-center'>
-                    <input className='pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-md' type="text" placeholder='Search' />
+                    <input id='search' className='pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-md' type="text" placeholder='Search' />
+
                     <SearchIcon />
                 </div>
             </div>
         </div>
     )
+
+
 }

@@ -26,11 +26,12 @@ export const AllBlogPostHome = () => {
           </div>
           <div className='font-bold text-[#495057] cursor-pointer'>View All</div>
         </div>
-        <div className='lg:grid lg:grid-cols-3 lg:gap-4'>
+        <div id='container' className='lg:grid lg:grid-cols-3 lg:gap-4 h-[1460px] overflow-hidden'>
           {articles.map((article, index) => {
             return (
-              <Link href={`/${article.id}`} key={index}>
-                <div className='w-[392px] h-[476px] lg:p-4 flex flex-col lg:gap-4 border-solid border-2 border-[#E8E8EA] rounded-xl cursor-pointer '>
+              < Link href={`/${article.id}`
+              } key={index} >
+                <div className='w-[392px] h-[476px] lg:p-4 flex flex-col lg:gap-4 border-solid border-2 border-[#E8E8EA] rounded-xl cursor-pointer'>
                   <div><img className='rounded-xl' src={article.social_image} alt="" /></div>
                   <div className='lg:p-2 lg:flex lg:flex-col lg:gap-4'>
                     <div className='gap-4 flex flex-col overflow-auto'>
@@ -50,11 +51,16 @@ export const AllBlogPostHome = () => {
             )
           })}
         </div>
-        <div className='flex m-auto rounded-lg py-3 px-5 border-solid border-2 border-[#E8E8EA] w-[123px]'>
-          <button>Load More</button>
-        </div>
+        <button id='loadButton' className='flex m-auto rounded-lg py-3 px-5 border-solid border-2 border-[#E8E8EA] w-[123px]' onClick={container}>Load More</button>
       </div>
 
-    </div>
+    </div >
   )
+  function container() {
+    const container = document.getElementById("container");
+    const button = document.getElementById("loadButton");
+    container.style.overflow = "visible"
+    container.style.height = "auto"
+    button.style.display = "none";
+  }
 }
