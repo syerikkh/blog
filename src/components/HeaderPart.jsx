@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const HeaderPart = () => {
     return (
         <div className="lg:py-8 lg:w-full m-auto">
-            <div className="flex">
+            <div className="flex m-auto">
                 <div className='lg:mr-[118px]'><MetaBlogLogo /></div>
                 <div className='flex lg:gap-10 justify-center items-center lg:w-[667px] lg:text-base'>
                     <Link href="/">Home</Link>
