@@ -11,6 +11,9 @@ export const HeaderPart = () => {
         const data = await res.json();
         setData(data);
     }
+    const [searchValue, setSearchValue] = useState('');
+    console.log('search', searchValue)
+
     return (
         <div className="lg:py-8 lg:w-full">
             <div className="flex">
@@ -21,13 +24,20 @@ export const HeaderPart = () => {
                     <Link href="/contact">Contact</Link>
                 </div>
                 <div className='flex gap-3 justify-center items-center'>
-                    <input id='search' className='pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-md' type="text" placeholder='Search' />
-
-                    <SearchIcon />
+                    <input id='search' className='pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-md' type="text" placeholder='Search' value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+                    <button><SearchIcon /></button>
                 </div>
             </div>
         </div>
-    )
 
+    )
+    //     function search() {
+    //         const searchBar = document.getElementById("search").value;
+    //         data.map((article) => {
+    //             return (
+    //         if ({ article.title }.includes(searchBar))
+    //     )
+    //     })
+    // }
 
 }

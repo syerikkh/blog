@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Footer } from '../Footer'
 import Link from 'next/link'
+import { SearchContext } from '@/context/SearchCont'
+import { SearchCont } from '@/context/SearchCont'
 
 export const AllBlogPosts = () => {
+    const { searchValue, setSearchValue } = useContext(SearchContext);
+    console.log(searchValue, 'value');
+
     const [articles, setArticles] = useState([])
     useEffect(() => {
         fetch('https://dev.to/api/articles')
