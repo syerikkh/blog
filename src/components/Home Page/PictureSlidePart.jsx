@@ -20,10 +20,10 @@ export const PictureSlidePart = () => {
   console.log(slide?.tag_list)
   return (
     < div >
-      <div className='mt-[100px] flex flex-col items-center flex flex-col gap-2'>
+      <div className='mt-[100px] flex flex-col items-end flex flex-col gap-2'>
         <div className='relative'>
           <div className='flex'>
-            <img className='rounded-lg w-[1216px] h-[600px]' src={slide?.cover_image ? slide?.cover_image : "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg"} alt="" />
+            <img className='rounded-lg w-[1216px] h-[600px] relative' src={slide?.cover_image ? slide?.cover_image : "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg"} alt="" />
           </div>
           <div className='bg-white w-[558px] h-[232px] absolute bottom-2 left-2 p-10 rounded-lg flex flex-col gap-4 border-solid border-2 border-[#E8E8EA]'>
             <div className='flex gap-2'>

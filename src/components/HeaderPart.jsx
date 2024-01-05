@@ -1,19 +1,13 @@
-import React, { useState } from 'react'
+
 import { MetaBlogLogo } from './MetaBlogLogo'
 import { SearchIcon } from './SearchIcon'
 import Link from 'next/link'
+import { useContext } from 'react'
+import { SearchContextValue } from '@/context/SearchCont'
 // import Blog from '@/pages/blog'
 
 export const HeaderPart = () => {
-    const [data, setData] = useState([]);
-    const fetchData = async () => {
-        const res = await fetch('https://dev.to/api/articles');
-        const data = await res.json();
-        setData(data);
-    }
-    const [searchValue, setSearchValue] = useState('');
-    console.log('search', searchValue)
-
+    const { searchValue, setSearchValue } = useContext(SearchContextValue);
     return (
         <div className="lg:py-8 lg:w-full">
             <div className="flex">
@@ -31,13 +25,4 @@ export const HeaderPart = () => {
         </div>
 
     )
-    //     function search() {
-    //         const searchBar = document.getElementById("search").value;
-    //         data.map((article) => {
-    //             return (
-    //         if ({ article.title }.includes(searchBar))
-    //     )
-    //     })
-    // }
-
 }

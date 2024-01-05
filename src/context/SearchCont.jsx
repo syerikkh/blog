@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { createContext } from 'react'
 
-export const SearchContext = createContext(null);
-export const SearchCont = () => {
-    const [searchValue, setSearchValue] = useState('')
+export const SearchContextValue = createContext(0);
+
+export const SearchProvider = ({ children }) => {
+    const [searchValue, setSearchValue] = useState('');
+    console.log('search', searchValue)
     return (
-        <SearchContext.Provider value={{ searchValue, setSearchValue }}>
+        <SearchContextValue.Provider value={{ searchValue, setSearchValue }}>
             {children}
-        </SearchContext.Provider>
+        </SearchContextValue.Provider>
     )
 }

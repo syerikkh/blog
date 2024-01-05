@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Footer } from '../Footer'
 import Link from 'next/link'
-import { SearchContext } from '@/context/SearchCont'
-import { SearchCont } from '@/context/SearchCont'
+import { SearchContextValue } from '@/context/SearchCont'
 
 export const AllBlogPosts = () => {
-    const { searchValue, setSearchValue } = useContext(SearchContext);
-    console.log(searchValue, 'value');
+    const { searchValue, setSearchValue } = useContext(SearchContextValue);
 
     const [articles, setArticles] = useState([])
     useEffect(() => {
@@ -14,6 +12,9 @@ export const AllBlogPosts = () => {
             .then(resp => resp.json())
             .then(articles => setArticles(articles))
     }, [])
+    const searchArticles = articles.filter((article) =>
+        article.title.includes(searchValue)
+    )
     return (
         <div className='flex flex-col gap-8'>
             <div className='lg:py-12 flex items-center'>
