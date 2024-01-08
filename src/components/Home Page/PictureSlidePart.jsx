@@ -23,16 +23,16 @@ export const PictureSlidePart = () => {
       <div className='mt-[100px] flex flex-col items-end flex flex-col gap-2'>
         <div className='relative'>
           <div className='flex'>
-            <img className='rounded-lg w-[1216px] h-[600px] relative' src={slide?.cover_image ? slide?.cover_image : "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg"} alt="" />
+            <img className='rounded-lg w-[390px] lg:w-[1216px] lg:h-[600px] relative' src={slide?.cover_image ? slide?.cover_image : "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg"} alt="" />
           </div>
-          <div className='bg-white w-[558px] h-[232px] absolute bottom-2 left-2 p-10 rounded-lg flex flex-col gap-4 border-solid border-2 border-[#E8E8EA]'>
+          <div className='bg-white lg:w-[558px] lg:h-[232px] w-[188px] h-[72px] absolute bottom-2 left-2 p-2 lg:p-10 rounded-lg flex flex-col lg:gap-4 gap-1 items-start justify-center border-solid border-2 border-[#E8E8EA]'>
             <div className='flex gap-2'>
               {slide?.tag_list.map((tags) => {
                 return (
-                  <div className='py-1 px-[10px] text-white text-base bg-[#4B6BFB] rounded-lg'>{tags}</div>
+                  <div className='py-1 px-[10px] text-white lg:text-base text-xs bg-[#4B6BFB] rounded-lg'>{tags}</div>
                 )
               })}</div>
-            <h1 className='font-semibold text-3xl'>{slide?.title}</h1>
+            <h1 className='font-semibold text-xs lg:text-3xl'>{slide?.title}</h1>
             <p className='text-gray-500'>{new Date(slide?.published_at).toLocaleDateString()}</p>
           </div>
         </div>
