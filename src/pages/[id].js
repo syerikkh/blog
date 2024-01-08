@@ -2,8 +2,10 @@ import { HeaderPart } from '@/components/HeaderPart';
 import { useRouter } from 'next/router'
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { SearchContextValue } from '@/context/SearchCont';
 
 export default function BlogId() {
+    // const { searchValue, setSearchValue } = useContext(SearchContextValue);
     const { query } = useRouter();
     const [filteredArticles, setFilteredArticles] = useState([]);
 
