@@ -26,7 +26,7 @@ export const AllBlogPostHome = () => {
           </div>
           <div className='font-bold text-[#495057] cursor-pointer'>View All</div>
         </div>
-        <div id='container' className='lg:grid lg:grid-cols-3 lg:gap-4 h-[1460px] overflow-hidden'>
+        <div id='container' className='lg:grid lg:grid-cols-3 lg:gap-4 flex flex-col items-center gap-2 h-[1460px] overflow-hidden'>
           {articles.map((article, index) => {
             return (
               < Link href={`/${article.id}`

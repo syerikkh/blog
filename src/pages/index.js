@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className="lg:w-[1216px] lg:m-auto w-[390px]">
+    <div className="lg:w-[1216px] lg:m-auto">
       <HeaderPart />
       <PictureSlidePart />
       {/* <AllBlogPosts /> */}

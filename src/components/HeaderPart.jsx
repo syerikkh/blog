@@ -14,9 +14,9 @@ export const HeaderPart = () => {
             <div className="flex justify-between">
                 <div className='lg:mr-[118px]'><MetaBlogLogo /></div>
                 <div className='lg:flex lg:gap-10 justify-center items-center lg:w-[667px] lg:text-base hidden lg:block'>
-                    <Link href="/">Home</Link>
-                    <Link href="/blog">Blog</Link>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/" className='hover:text-sky-700'>Home</Link>
+                    <Link href="/blog" className='hover:text-sky-700'>Blog</Link>
+                    <Link href="/contact" className='hover:text-sky-700'>Contact</Link>
                 </div>
                 <div className='lg:flex lg:gap-2 lg:justify-center lg:items-center hidden lg:block'>
                     <input id='search' className='pl-4 py-2 pr-2 bg-[#F4F4F5] rounded-md' type="text" placeholder='Search' value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
@@ -26,7 +26,7 @@ export const HeaderPart = () => {
                     <BurgerMenuIcon />
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }

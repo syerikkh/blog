@@ -25,13 +25,13 @@ export const Trending = () => {
     return (
         <div className='mt-[100px]'>
             <div className='flex flex-col gap-10 overflow-auto'>
-                <div className='text-2xl font-bold'>Trending</div>
+                <div className='text-2xl font-bold ml-2 lg:m-0'>Trending</div>
                 <div className='flex gap-5 overflow-auto'>
                     {articles.slice(0, 5).map((article, index) => {
                         return (
                             <Link href={`/${article.id}`} key={index}>
                                 <div className='relative flex justify-center items-end'>
-                                    <img className='min-w-[420px] min-h-[320px] rounded-lg' src={article.cover_image ? article.cover_image : "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg"} alt="" />
+                                    <img className='min-w-[420px] min-h-[320px] lg:rounded-lg' src={article.cover_image ? article.cover_image : "https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg"} alt="" />
                                     <div className='absolute bottom-7 left-7 right-7 text-white flex flex-col gap-4 z-10'>
                                         <div className='flex gap-2'>
                                             {article?.tag_list.map((tags) => {
