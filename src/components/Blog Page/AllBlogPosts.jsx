@@ -20,10 +20,10 @@ export const AllBlogPosts = () => {
 
     return (
         <div className='flex flex-col gap-8'>
-            <div className='lg:py-12 flex items-center'>
+            <div className='lg:py-12 p-8'>
                 <div className='flex justify-start items-start text-2xl font-bold'>All Blog Posts</div>
             </div>
-            <div className='lg:grid lg:grid-cols-3 lg:gap-4 lg:grid-rows-6'>
+            <div className='lg:grid lg:grid-cols-3 lg:gap-4 lg:grid-rows-6 items-center flex flex-col p-2'>
                 {filteredArticles.map((article, index) => {
                     return (
                         <Link href={`/${filteredArticles.id}`} key={index}>

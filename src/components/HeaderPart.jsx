@@ -26,9 +26,19 @@ export const HeaderPart = () => {
                     <button><SearchIcon /></button>
                 </div>
                 <div className='block lg:hidden' onClick={() => setActive(!active)}>
-                    {active ? <RightArrow /> : <BurgerMenuIcon />}
+                    {active ?
+
+                        <img className='w-8 h-8' src="xicon.png" alt="" />
+
+                        : <BurgerMenuIcon />}
                 </div>
+
             </div>
+            {active ? <div className='flex mt-5 p-2 rounded-md flex-col gap-4 border-solid border-2 border-sky-500 justify-center items-center text-base lg:hidden'>
+                <Link href="/" className='hover:text-sky-700'>Home</Link>
+                <Link href="/blog" className='hover:text-sky-700'>Blog</Link>
+                <Link href="/contact" className='hover:text-sky-700'>Contact</Link>
+            </div> : <></>}
         </div >
 
     )
